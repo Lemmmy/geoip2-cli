@@ -1,13 +1,13 @@
 {
   "name": "@lemmmy/geoip2-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Code and command-line utils for download and convert geoip2 maxmind mmdb",
   "author": "Sviatoslav H",
   "license": "MIT",
-  "homepage": "https://github.com/svtslv/geoip2-cli",
+  "homepage": "https://github.com/Lemmmy/geoip2-cli",
   "repository": {
     "type": "git",
-    "url": "https://github.com/svtslv/geoip2-cli"
+    "url": "https://github.com/Lemmmy/geoip2-cli"
   },
   "keywords": [
     "cli",
