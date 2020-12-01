@@ -1,7 +1,7 @@
 # GeoIP2 CLI
 
-<a href="https://www.npmjs.com/package/geoip2-cli"><img src="https://img.shields.io/npm/v/geoip2-cli.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/package/geoip2-cli"><img src="https://img.shields.io/npm/l/geoip2-cli.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/package/@lemmmy/geoip2-cli"><img src="https://img.shields.io/npm/v/@lemmmy/geoip2-cli.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/package/@lemmmy/geoip2-cli"><img src="https://img.shields.io/npm/l/@lemmmy/geoip2-cli.svg" alt="Package License" /></a>
 
 ## Table of Contents
 

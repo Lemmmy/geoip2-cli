@@ -42,15 +42,16 @@ export class Geoip2CliDownloader {
     const link = 'https://download.maxmind.com/app/geoip_download';
     const url = `${link}?license_key=${licenseKey}&edition_id=${EDITIONS[edition]}&date=${date}&suffix=tar.gz`;
 
-    return await new Promise(resolve => {
+    return await new Promise((resolve, reject) => {
       https.get(url, response => {
         response
         .pipe(zlib.createGunzip().on('error', () => console.log('Link not found. Invalid licenseKey?')))
         .pipe(tar.t()).on('entry', (entry: any) => {
           if (entry.path.endsWith('.mmdb')) {
             const dstFilename = path.join(downloadPath, path.basename(entry.path));
-            entry.pipe(fs.createWriteStream(dstFilename));
-            resolve(dstFilename);
+            entry.pipe(fs.createWriteStream(dstFilename))
+              .on('finish', () => resolve(dstFilename))
+              .on('error', reject);
           }
         });
       });
